@@ -385,7 +385,7 @@ if (strtolower($message['text']) == "全部 必做清單") {
         'messages' => array(
             array(
                 'type' => 'flex', //訊息類型 (flex)
-                'altText' => 'Example flex message template', //替代文字
+                'altText' => '全部 必做清單', //替代文字
                 'contents' => $contentsArray //Flex Message 內容
             )
         )
@@ -654,7 +654,7 @@ if (strtolower($message['text']) == "全部 必做清單") {
         'messages' => array(
             array(
                 'type' => 'flex', //訊息類型 (flex)
-                'altText' => 'Example flex message template', //替代文字
+                'altText' => '未做 必做清單', //替代文字
                 'contents' => $contentsArray //Flex Message 內容
             )
         )
