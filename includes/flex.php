@@ -322,6 +322,26 @@ if (strtolower($message['text']) == "全部 必做清單") {
                                     "flex" => 8
                                 )
                             )
+                        ),
+                        array(
+                            "type" => "box",
+                            "layout" => "horizontal",
+                            "contents" => array(
+                                array(
+                                    "type" => "text",
+                                    "text" => "❎",
+                                    "size" => "sm",
+                                    "color" => "#555555",
+                                    "flex" => 1
+                                ),
+                                array(
+                                    "type" => "text",
+                                    "text" => "一起泡溫泉",
+                                    "size" => "sm",
+                                    "color" => "#111111",
+                                    "flex" => 8
+                                )
+                            )
                         )
                     )
                 ),
@@ -364,7 +384,7 @@ if (strtolower($message['text']) == "全部 必做清單") {
                         ),
                         array(
                             "type" => "text",
-                            "text" => "2022/10/04",
+                            "text" => "2022/10/05",
                             "color" => "#aaaaaa",
                             "size" => "xs",
                             "align" => "end"
