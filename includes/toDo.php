@@ -142,7 +142,7 @@ if($toDo) {
 				'messages' => array(
 					array(
 						'type' => 'text', //訊息類型 (文字)
-						'text' => json_encode($data)
+						'text' => json_encode($out)
 					)
 				)
 			));
