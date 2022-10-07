@@ -5,15 +5,6 @@ require_once('connection.php');
 $name = "必做清單";
 $sql = "SELECT * FROM `toDoList` WHERE `name` = '".$name."'";
 $toDo = mysqli_query( $conn, $sql );
-$client->replyMessage(array(
-	'replyToken' => $event['replyToken'],
-	'messages' => array(
-		array(
-			'type' => 'text', //訊息類型 (文字)
-			'text' => "第2個文字"
-		)
-	)
-));
 if($toDo) {
 	$list = mysqli_fetch_array($toDo, MYSQLI_ASSOC);
 
@@ -158,6 +149,16 @@ if($toDo) {
 		}
 	}
 }
+
+$client->replyMessage(array(
+	'replyToken' => $event['replyToken'],
+	'messages' => array(
+		array(
+			'type' => 'text', //訊息類型 (文字)
+			'text' => "第3個文字"
+		)
+	)
+));
 
 
 ?>
