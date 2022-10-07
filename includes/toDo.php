@@ -11,23 +11,23 @@ if($toDo) {
 		$id = $list['id'];
 		$sql = "SELECT * FROM `toDoList_detail` WHERE `id` = ".$id;
 		
-		$client->replyMessage(array(
-			'replyToken' => $event['replyToken'],
-			'messages' => array(
-				array(
-					'type' => 'text', //訊息類型 (文字)
-					'text' => $sql
-				)
-			)
-		));
-
-		/*
 		$sql = "SELECT * FROM `toDoList_detail` WHERE `id` = ".$id;
 		$detail = mysqli_query( $conn, $sql );
 		$data = [];
 		while ($res = mysqli_fetch_array($detail, MYSQLI_ASSOC)) {
 			$data[] = $res;
 		}
+		
+		$client->replyMessage(array(
+			'replyToken' => $event['replyToken'],
+			'messages' => array(
+				array(
+					'type' => 'text', //訊息類型 (文字)
+					'text' => json_encode($data)
+				)
+			)
+		));
+/*
 		if($data){
 			$icon = ["❎","✅"];
 			$contents = [];
