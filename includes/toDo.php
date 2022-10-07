@@ -1,6 +1,6 @@
 <?php
 global $client, $message, $event;
-require_once('./connection.php');
+//require_once('./connection.php');
 
 $client->replyMessage(array(
 	'replyToken' => $event['replyToken'],
@@ -12,7 +12,7 @@ $client->replyMessage(array(
 	    )
 	)
 ));
-
+/*
 $name = explode(" ",$message['text']);
 $sql = "SELECT * FROM `toDoList` WHERE `name` = '".$name."'";
 //$toDo = mysqli_query( $conn, $sql );
