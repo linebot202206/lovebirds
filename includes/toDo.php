@@ -46,6 +46,7 @@ if($toDo) {
 			}
 			*/
 
+			/*
 			$title = [
 				[
 					'type' => "text",
@@ -62,14 +63,18 @@ if($toDo) {
 					'margin' => "md",
 				],
 			];
+			*/
 
+			/*
 			$separator = [
 				[
 					'type' => "separator",
 					'margin' => "xxl",
 				],
 			];
-
+			*/
+			
+			/*
 			$time = [
 				[
 					'type' => "box",
@@ -114,7 +119,9 @@ if($toDo) {
 					],
 				],
 			];
+			*/
 
+			/*
 			$box = [
 				[
 					'type' => "box",
@@ -124,13 +131,15 @@ if($toDo) {
 					'contents' => $contents,
 				],
 			];
+			*/
 
 			$out = [
 				'type' => "bubble",
 				'body' => [
 					'type' => "box",
 					'layout' => "vertical",
-					'contents' => array_merge($title, $separator, $box, $separator, $time),
+					//'contents' => array_merge($title, $separator, $box, $separator, $time),
+					'contents' => $title,
 				],
 				'style' => [
 					'footer' => [
