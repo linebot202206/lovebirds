@@ -133,8 +133,18 @@ if($toDo) {
 					],
 				],
 			];
-			echo json_encode($out);
+			//echo json_encode($out);
 			//print_r($out);
+		        $client->replyMessage(array(
+		            'replyToken' => $event['replyToken'],
+		            'messages' => array(
+			        array(
+			            'type' => 'text', //訊息類型 (文字)
+			            'text' => "第一個文字"
+			            //'text' => 'Hello, world!'.$profile['displayName'] //回覆訊息
+			        )
+		            )
+		        ));
 		}
 	}
 }
