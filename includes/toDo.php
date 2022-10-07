@@ -9,6 +9,8 @@ if($toDo) {
 	$list = mysqli_fetch_array($toDo, MYSQLI_ASSOC);
 	if($list){
 		$id = $list['id'];
+
+		/*
 		$sql = "SELECT * FROM `toDoList_detail` WHERE `id` = ".$id;
 		$detail = mysqli_query( $conn, $sql );
 		$data = [];
@@ -146,6 +148,7 @@ if($toDo) {
             ));
 			
 		}
+	*/
 	}
 }
 
