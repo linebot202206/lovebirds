@@ -136,6 +136,87 @@ if($toDo) {
 					],
 				],
 			];
+			
+			$out2 = array(
+    "type" => "bubble",
+    "body" => array(
+        "type" => "box",
+        "layout" => "vertical",
+        "contents" => array(
+            array(
+                "type" => "text",
+                "text" => "全部",
+                "weight" => "bold",
+                "color" => "#1DB446",
+                "size" => "sm"
+            ),
+            array(
+                "type" => "text",
+                "text" => "必做清單",
+                "weight" => "bold",
+                "size" => "xxl",
+                "margin" => "md"
+            ),
+            array(
+                "type" => "separator",
+                "margin" => "xxl"
+            ),
+            array(
+                "type" => "box",
+                "layout" => "vertical",
+                "margin" => "xxl",
+                "spacing" => "sm",
+                "contents" => array(
+                    array(
+                        "type" => "box",
+                        "layout" => "horizontal",
+                        "contents" => array(
+                            array(
+                                "type" => "text",
+                                "text" => "❎",
+                                "size" => "sm",
+                                "color" => "#555555",
+                                "flex" => 1
+                            ),
+                            array(
+                                "type" => "text",
+                                "text" => "去澎湖看煙火牽手",
+                                "size" => "sm",
+                                "color" => "#111111",
+                                "flex" => 8
+                            )
+                        )
+                    )
+                )
+            ),
+            array(
+                "type" => "separator",
+                "margin" => "xxl"
+            ),
+            array(
+                "type" => "box",
+                "layout" => "horizontal",
+                "margin" => "md",
+                "contents" => array(
+                    array(
+                        "type" => "text",
+                        "text" => "建立時間",
+                        "size" => "xs",
+                        "color" => "#aaaaaa",
+                        "flex" => 0
+                    ),
+                    array(
+                        "type" => "text",
+                        "text" => "2022/10/04 00:00",
+                        "size" => "xs",
+                        "color" => "#aaaaaa",
+                        "align" => "end"
+                    )
+                )
+            )
+        )
+    )
+);
             
 			$client->replyMessage(array(
 			    'replyToken' => $event['replyToken'],
@@ -143,7 +224,7 @@ if($toDo) {
 					array(
 					    'type' => 'flex', //訊息類型 (flex)
 					    'altText' => 'Example flex message template', //替代文字
-					    'contents' => $out //Flex Message 內容
+					    'contents' => $out2 //Flex Message 內容
 					)
 			    )
 			));
