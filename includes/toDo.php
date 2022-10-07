@@ -18,16 +18,6 @@ if($toDo) {
 			$data[] = $res;
 		}
 		
-		$client->replyMessage(array(
-			'replyToken' => $event['replyToken'],
-			'messages' => array(
-				array(
-					'type' => 'text', //訊息類型 (文字)
-					'text' => json_encode($data)
-				)
-			)
-		));
-/*
 		if($data){
 			$icon = ["❎","✅"];
 			$contents = [];
@@ -147,19 +137,17 @@ if($toDo) {
 				],
 			];
             
-            $client->replyMessage(array(
-                'replyToken' => $event['replyToken'],
-                'messages' => array(
-                    array(
-                        'type' => 'flex', //訊息類型 (flex)
-                        'altText' => '清單', //替代文字
-                        'contents' => $out //Flex Message 內容
-                    )
-                )
-            ));
+			$client->replyMessage(array(
+				'replyToken' => $event['replyToken'],
+				'messages' => array(
+					array(
+						'type' => 'text', //訊息類型 (文字)
+						'text' => json_encode($data)
+					)
+				)
+			));
 			
 		}
-	*/
 	}
 }
 
