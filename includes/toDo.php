@@ -1,5 +1,5 @@
 <?php
-global $client, $message, $event;
+global $client, $message, $event, $conn;
 require_once('connection.php');
 
 $name = "必做清單";
@@ -7,6 +7,7 @@ $sql = "SELECT * FROM `toDoList` WHERE `name` = '".$name."'";
 $toDo = mysqli_query( $conn, $sql );
 if($toDo) {
 	$list = mysqli_fetch_array($toDo, MYSQLI_ASSOC);
+
 
 	if($list){
 		$id = $list['id'];
