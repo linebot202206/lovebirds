@@ -137,15 +137,16 @@ if($toDo) {
 				],
 			];
             
-			$client->replyMessage(array(
-				'replyToken' => $event['replyToken'],
-				'messages' => array(
-					array(
-						'type' => 'text', //訊息類型 (文字)
-						'text' => json_encode($out)
-					)
-				)
-			));
+		$client->replyMessage(array(
+		    'replyToken' => $event['replyToken'],
+		    'messages' => array(
+			array(
+			    'type' => 'flex', //訊息類型 (flex)
+			    'altText' => 'Example flex message template', //替代文字
+			    'contents' => $out //Flex Message 內容
+			)
+		    )
+		));
 			
 		}
 	}
