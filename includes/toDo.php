@@ -2,6 +2,17 @@
 global $client, $message, $event;
 require_once('connection.php');
 
+$client->replyMessage(array(
+	'replyToken' => $event['replyToken'],
+	'messages' => array(
+		array(
+			'type' => 'text', //訊息類型 (文字)
+			'text' => "第一個文字"
+		)
+	)
+));
+
+/*
 $name = "必做清單";
 $sql = "SELECT * FROM `toDoList` WHERE `name` = '".$name."'";
 $toDo = mysqli_query( $conn, $sql );
@@ -149,5 +160,6 @@ if($toDo) {
 		}
 	}
 }
+*/
 
 ?>
