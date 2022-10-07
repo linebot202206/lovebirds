@@ -7,8 +7,6 @@ $sql = "SELECT * FROM `toDoList` WHERE `name` = '".$name."'";
 $toDo = mysqli_query( $conn, $sql );
 if($toDo) {
 	$list = mysqli_fetch_array($toDo, MYSQLI_ASSOC);
-
-/*
 	if($list){
 		$id = $list['id'];
 		$sql = "SELECT * FROM `toDoList_detail` WHERE `id` = ".$id;
@@ -149,7 +147,6 @@ if($toDo) {
 			
 		}
 	}
-*/
 }
 
 $client->replyMessage(array(
