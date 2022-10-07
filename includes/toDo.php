@@ -1,7 +1,7 @@
 <?php
 require_once('./connection.php');
 
-$name = "必做清單";
+$name = explode(" ",$message['text']);
 $sql = "SELECT * FROM `toDoList` WHERE `name` = '".$name."'";
 $toDo = mysqli_query( $conn, $sql );
 if($toDo) {
