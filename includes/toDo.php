@@ -1,9 +1,21 @@
 <?php
+global $client, $message, $event;
 require_once('./connection.php');
+
+$client->replyMessage(array(
+	'replyToken' => $event['replyToken'],
+	'messages' => array(
+	    array(
+		'type' => 'text', //訊息類型 (文字)
+		'text' => "第一個文字"
+		//'text' => 'Hello, world!'.$profile['displayName'] //回覆訊息
+	    )
+	)
+));
 
 $name = explode(" ",$message['text']);
 $sql = "SELECT * FROM `toDoList` WHERE `name` = '".$name."'";
-$toDo = mysqli_query( $conn, $sql );
+//$toDo = mysqli_query( $conn, $sql );
 if($toDo) {
 	$list = mysqli_fetch_array($toDo, MYSQLI_ASSOC);
 
