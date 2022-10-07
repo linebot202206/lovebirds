@@ -149,8 +149,8 @@ if($toDo) {
 			
 		}
 	}
-}
 */
+}
 
 $client->replyMessage(array(
 	'replyToken' => $event['replyToken'],
