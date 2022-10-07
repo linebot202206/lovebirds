@@ -46,7 +46,6 @@ if($toDo) {
 			}
 			*/
 
-			/*
 			$title = [
 				[
 					'type' => "text",
@@ -63,7 +62,6 @@ if($toDo) {
 					'margin' => "md",
 				],
 			];
-			*/
 
 			/*
 			$separator = [
