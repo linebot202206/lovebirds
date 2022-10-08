@@ -146,7 +146,6 @@ if($toDo) {
 				],
 			];
 			
-if($contentsArray){
         $client->replyMessage(array(
             'replyToken' => $event['replyToken'],
             'messages' => array(
@@ -157,7 +156,6 @@ if($contentsArray){
                 )
             )
         ));
-    }
 			
 			
 		}
