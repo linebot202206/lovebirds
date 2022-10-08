@@ -11,8 +11,15 @@ if($toDo) {
 	$list = mysqli_fetch_array($toDo, MYSQLI_ASSOC);
 	if($list){
 		$id = $list['id'];
+		$act = $message['text'])[2];
+		if($act == "完成"){
+			$itemName = $message['text'])[3];
+			$sql = "UPDATE `toDoList_detail` SET `finish`=1 WHERE `id` = ".$id." AND `mame` = '".$itemName."'";
+			mysqli_query( $conn, $sql );
+		}
 		//$sql = "SELECT * FROM `toDoList_detail` WHERE `id` = ".$id;
 		
+		/*
 		if(explode(" ",$message['text'])[2] == "未做"){
 			$sql = "SELECT * FROM `toDoList_detail` WHERE `id` = ".$id." AND `finish` = 0";
 		}else{
@@ -152,6 +159,7 @@ if($toDo) {
 	        ));
 			
 		}
+		*/
 	}
 }
 
