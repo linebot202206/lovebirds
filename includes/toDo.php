@@ -69,7 +69,6 @@ if($toDo) {
 				],
 			];
 			
-			/*
 			$time = [
 				[
 					'type' => "box",
@@ -114,7 +113,6 @@ if($toDo) {
 					],
 				],
 			];
-			*/
 
 			$box = [
 				[
@@ -132,7 +130,7 @@ if($toDo) {
 					'type' => "box",
 					'layout' => "vertical",
 					//'contents' => array_merge($title, $separator, $box, $separator, $time),
-					'contents' => array_merge($title, $separator, $box, $separator),
+					'contents' => array_merge($title, $separator, $box, $separator, $time),
 				]
 			];
 			
