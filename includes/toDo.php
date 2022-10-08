@@ -34,7 +34,7 @@ if($toDo) {
 		}
 		
 		if($data){
-			$icon = ["❎","✅"];
+			$icon = ["❌","✔️"];
 			$test = ["完成","未做"];
 			$contents = [];
 
