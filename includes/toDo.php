@@ -16,19 +16,8 @@ if($toDo) {
 			$itemName = explode(" ",$message['text'])[3];
 			$sql = "UPDATE `toDoList_detail` SET `finish` = 1 WHERE `id` = ".$id." AND `name` = '".$itemName."'";
 			$res = mysqli_query( $conn, $sql );
-			$client->replyMessage(array(
-				'replyToken' => $event['replyToken'],
-				'messages' => array(
-				    array(
-					'type' => 'text', //訊息類型 (文字)
-					'text' => $res
-				    )
-				)
-			    ));
 		}
-		//$sql = "SELECT * FROM `toDoList_detail` WHERE `id` = ".$id;
 		
-		/*
 		if(explode(" ",$message['text'])[2] == "未做"){
 			$sql = "SELECT * FROM `toDoList_detail` WHERE `id` = ".$id." AND `finish` = 0";
 		}else{
@@ -168,7 +157,6 @@ if($toDo) {
 	        ));
 			
 		}
-		*/
 	}
 }
 
