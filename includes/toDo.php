@@ -161,16 +161,16 @@ if($toDo) {
     )
 );
 			
-        $client->replyMessage(array(
-            'replyToken' => $event['replyToken'],
-            'messages' => array(
-                array(
-                    'type' => 'flex', //訊息類型 (flex)
-                    'altText' => 'Example flex message template', //替代文字
-                    'contents' => $box //Flex Message 內容
-                )
-            )
-        ));
+$client->replyMessage(array(
+	        'replyToken' => $event['replyToken'],
+	        'messages' => array(
+	            array(
+	                'type' => 'text', //訊息類型 (文字)
+	                'text' => json_encode($out)
+	                //'text' => 'Hello, world!'.$profile['displayName'] //回覆訊息
+	            )
+	        )
+	    ));
 			
 			
 		}
