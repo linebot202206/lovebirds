@@ -134,154 +134,16 @@ if($toDo) {
 				]
 			];
 			
-			
-			$tmp = array(
-    "type" => "bubble",
-    "body" => array(
-        "type" => "box",
-        "layout" => "vertical",
-        "contents" => array(
-            array(
-                "type" => "text",
-                "text" => "全部",
-                "weight" => "bold",
-                "color" => "#1DB446",
-                "size" => "sm"
-            ),
-            array(
-                "type" => "text",
-                "text" => "必做清單",
-                "weight" => "bold",
-                "size" => "xxl",
-                "margin" => "md"
-            ),
-            array(
-                "type" => "separator",
-                "margin" => "xxl"
-            ),
-            array(
-                "type" => "box",
-                "layout" => "vertical",
-                "margin" => "xxl",
-                "spacing" => "sm",
-                "contents" => array(
-                    array(
-                        "type" => "box",
-                        "layout" => "horizontal",
-                        "contents" => array(
-                            array(
-                                "type" => "text",
-                                "text" => "❎",
-                                "size" => "sm",
-                                "color" => "#555555",
-                                "flex" => 1
-                            ),
-                            array(
-                                "type" => "text",
-                                "text" => "去澎湖看煙火牽手",
-                                "size" => "sm",
-                                "color" => "#111111",
-                                "flex" => 8
-                            )
-                        )
-                    ),
-                    array(
-                        "type" => "box",
-                        "layout" => "horizontal",
-                        "contents" => array(
-                            array(
-                                "type" => "text",
-                                "text" => "❎",
-                                "size" => "sm",
-                                "color" => "#555555",
-                                "flex" => 1
-                            ),
-                            array(
-                                "type" => "text",
-                                "text" => "跟彼此父母吃飯",
-                                "size" => "sm",
-                                "color" => "#111111",
-                                "flex" => 8
-                            )
-                        )
-                    ),
-                    array(
-                        "type" => "box",
-                        "layout" => "horizontal",
-                        "contents" => array(
-                            array(
-                                "type" => "text",
-                                "text" => "❎",
-                                "size" => "sm",
-                                "color" => "#555555",
-                                "flex" => 1
-                            ),
-                            array(
-                                "type" => "text",
-                                "text" => "在彼此家過夜",
-                                "size" => "sm",
-                                "color" => "#111111",
-                                "flex" => 8
-                            )
-                        )
-                    ),
-                    array(
-                        "type" => "box",
-                        "layout" => "horizontal",
-                        "contents" => array(
-                            array(
-                                "type" => "text",
-                                "text" => "✅",
-                                "size" => "sm",
-                                "color" => "#555555",
-                                "flex" => 1
-                            ),
-                            array(
-                                "type" => "text",
-                                "text" => "認識彼此的朋友",
-                                "size" => "sm",
-                                "color" => "#111111",
-                                "flex" => 8
-                            )
-                        )
-                    ),
-                    array(
-                        "type" => "box",
-                        "layout" => "horizontal",
-                        "contents" => array(
-                            array(
-                                "type" => "text",
-                                "text" => "❎",
-                                "size" => "sm",
-                                "color" => "#555555",
-                                "flex" => 1
-                            ),
-                            array(
-                                "type" => "text",
-                                "text" => "穿情侶衣約會",
-                                "size" => "sm",
-                                "color" => "#111111",
-                                "flex" => 8
-                            )
-                        )
-                    )
-                )
-            )
-        )
-    )
-);
-			
-        $client->replyMessage(array(
-            'replyToken' => $event['replyToken'],
-            'messages' => array(
-                array(
-                    'type' => 'flex', //訊息類型 (flex)
-                    'altText' => 'Example flex message template', //替代文字
-                    'contents' => $out //Flex Message 內容
-                )
-            )
-        ));
-			
+	        $client->replyMessage(array(
+	            'replyToken' => $event['replyToken'],
+	            'messages' => array(
+	                array(
+	                    'type' => 'flex', //訊息類型 (flex)
+	                    'altText' => '清單 '.$list['name'], //替代文字
+	                    'contents' => $out //Flex Message 內容
+	                )
+	            )
+	        ));
 			
 		}
 	}
