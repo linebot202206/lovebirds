@@ -15,13 +15,13 @@ if($toDo) {
 		if($act == "完成"){
 			$itemName = explode(" ",$message['text'])[3];
 			$sql = "UPDATE `toDoList_detail` SET `finish` = 1 WHERE `id` = ".$id." AND `name` = '".$itemName."'";
-			mysqli_query( $conn, $sql );
+			$res = mysqli_query( $conn, $sql );
 			$client->replyMessage(array(
 				'replyToken' => $event['replyToken'],
 				'messages' => array(
 				    array(
 					'type' => 'text', //訊息類型 (文字)
-					'text' => $sql
+					'text' => $res
 				    )
 				)
 			    ));
