@@ -14,7 +14,7 @@ if($toDo) {
 		$act = explode(" ",$message['text'])[2];
 		if($act == "完成"){
 			$itemName = explode(" ",$message['text'])[3];
-			//$sql = "UPDATE `toDoList_detail` SET `finish`=1 WHERE `id` = ".$id." AND `mame` = '".$itemName."'";
+			$sql = "UPDATE `toDoList_detail` SET `finish`=1 WHERE `id` = ".$id." AND `mame` = '".$itemName."'";
 			//mysqli_query( $conn, $sql );
 			$client->replyMessage(array(
 				'replyToken' => $event['replyToken'],
