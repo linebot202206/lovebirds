@@ -16,6 +16,9 @@ if($toDo) {
 			$itemName = explode(" ",$message['text'])[3];
 			$sql = "UPDATE `toDoList_detail` SET `finish` = 1 WHERE `id` = ".$id." AND `name` = '".$itemName."'";
 			$res = mysqli_query( $conn, $sql );
+			
+			$sql = "UPDATE `toDoList` SET `updateTime` = ".time()." WHERE `id` = ".$id;
+			$res = mysqli_query( $conn, $sql );
 		}else if($act == "未做"){
 			$itemName = explode(" ",$message['text'])[3];
 			$sql = "UPDATE `toDoList_detail` SET `finish` = 0 WHERE `id` = ".$id." AND `name` = '".$itemName."'";
@@ -126,7 +129,7 @@ if($toDo) {
 						],
 						[
 							'type' => "text",
-							'text' => date('Y/m/d H:i', $list['updatenTime']),
+							'text' => date('Y/m/d H:i', $list['updateTime']),
 							'size' => "xs",
 							'color' => "#aaaaaa",
 							'align' => "end",
