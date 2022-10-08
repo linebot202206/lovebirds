@@ -279,7 +279,7 @@ if($toDo) {
                 array(
                     'type' => 'flex', //訊息類型 (flex)
                     'altText' => 'Example flex message template', //替代文字
-                    'contents' => $tmp //Flex Message 內容
+                    'contents' => $out //Flex Message 內容
                 )
             )
         ));
