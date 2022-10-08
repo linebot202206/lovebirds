@@ -34,6 +34,17 @@ if($toDo) {
 			$sql = "SELECT * FROM `toDoList` WHERE `name` = '".$name."'";
 			$toDo = mysqli_query( $conn, $sql );
 			$list = mysqli_fetch_array($toDo, MYSQLI_ASSOC);
+		}else if($act == "新增"){
+			$itemName = explode(" ",$message['text'])[3];
+			$sql = "INSERT INTO `toDoList_detail`(`id`, `name`, `finish`) VALUES ( {$id}, {$itemName}, 0)";
+			$res = mysqli_query( $conn, $sql );
+			
+			$sql = "UPDATE `toDoList` SET `updateTime` = ".time()." WHERE `id` = ".$id;
+			$res = mysqli_query( $conn, $sql );
+			
+			$sql = "SELECT * FROM `toDoList` WHERE `name` = '".$name."'";
+			$toDo = mysqli_query( $conn, $sql );
+			$list = mysqli_fetch_array($toDo, MYSQLI_ASSOC);
 		}
 		
 		if(explode(" ",$message['text'])[2] == "待辦"){
