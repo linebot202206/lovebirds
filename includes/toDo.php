@@ -16,6 +16,10 @@ if($toDo) {
 			$itemName = explode(" ",$message['text'])[3];
 			$sql = "UPDATE `toDoList_detail` SET `finish` = 1 WHERE `id` = ".$id." AND `name` = '".$itemName."'";
 			$res = mysqli_query( $conn, $sql );
+		}else if($act == "未做"){
+			$itemName = explode(" ",$message['text'])[3];
+			$sql = "UPDATE `toDoList_detail` SET `finish` = 0 WHERE `id` = ".$id." AND `name` = '".$itemName."'";
+			$res = mysqli_query( $conn, $sql );
 		}
 		
 		if(explode(" ",$message['text'])[2] == "未做"){
