@@ -22,7 +22,7 @@ if($toDo) {
 			$res = mysqli_query( $conn, $sql );
 		}
 		
-		if(explode(" ",$message['text'])[2] == "未做"){
+		if(explode(" ",$message['text'])[2] == "待辦"){
 			$sql = "SELECT * FROM `toDoList_detail` WHERE `id` = ".$id." AND `finish` = 0";
 		}else{
 			$sql = "SELECT * FROM `toDoList_detail` WHERE `id` = ".$id;
