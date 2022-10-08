@@ -138,12 +138,7 @@ if($toDo) {
 					'layout' => "vertical",
 					//'contents' => array_merge($title, $separator, $box, $separator, $time),
 					'contents' => $title,
-				],
-				'style' => [
-					'footer' => [
-						'separator' => true,
-					],
-				],
+				]
 			];
 			
 			
@@ -177,7 +172,7 @@ $client->replyMessage(array(
 	        'messages' => array(
 	            array(
 	                'type' => 'text', //訊息類型 (文字)
-	                'text' => json_encode($tmp)
+	                'text' => json_encode($out)
 	                //'text' => 'Hello, world!'.$profile['displayName'] //回覆訊息
 	            )
 	        )
