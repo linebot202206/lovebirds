@@ -19,10 +19,18 @@ if($toDo) {
 			
 			$sql = "UPDATE `toDoList` SET `updateTime` = ".time()." WHERE `id` = ".$id;
 			$res = mysqli_query( $conn, $sql );
+			
+			$sql = "SELECT * FROM `toDoList` WHERE `name` = '".$name."'";
+			$toDo = mysqli_query( $conn, $sql );
+			$list = mysqli_fetch_array($toDo, MYSQLI_ASSOC);
 		}else if($act == "未做"){
 			$itemName = explode(" ",$message['text'])[3];
 			$sql = "UPDATE `toDoList_detail` SET `finish` = 0 WHERE `id` = ".$id." AND `name` = '".$itemName."'";
 			$res = mysqli_query( $conn, $sql );
+			
+			$sql = "SELECT * FROM `toDoList` WHERE `name` = '".$name."'";
+			$toDo = mysqli_query( $conn, $sql );
+			$list = mysqli_fetch_array($toDo, MYSQLI_ASSOC);
 		}
 		
 		if(explode(" ",$message['text'])[2] == "待辦"){
