@@ -2,7 +2,9 @@
 global $client, $message, $event, $conn;
 require_once('connection.php');
 
-$name = "必做清單";
+//$name = "必做清單";
+$name = explode(" ",$message['text'])[1];
+
 $sql = "SELECT * FROM `toDoList` WHERE `name` = '".$name."'";
 $toDo = mysqli_query( $conn, $sql );
 if($toDo) {
