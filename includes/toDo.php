@@ -21,7 +21,7 @@ if($toDo) {
 		if($data){
 			$icon = ["❎","✅"];
 			$contents = [];
-			/*
+
 			foreach ($data as $value) {
 				$contents[] = [
 					'type' => "box",
@@ -44,7 +44,6 @@ if($toDo) {
 					],
 				];
 			}
-			*/
 
 			$title = [
 				[
@@ -135,7 +134,7 @@ if($toDo) {
 					'type' => "box",
 					'layout' => "vertical",
 					//'contents' => array_merge($title, $separator, $box, $separator, $time),
-					'contents' => array_merge($title, $separator),
+					'contents' => array_merge($title, $separator, $box),
 				]
 			];
 			
