@@ -12,20 +12,20 @@ if($toDo) {
 	if($list){
 		$id = $list['id'];
 		$act = explode(" ",$message['text'])[2];
-		if($act == "完成"){
-			$itemName = explode(" ",$message['text'])[3];
-			$sql = "UPDATE `toDoList_detail` SET `finish`=1 WHERE `id` = ".$id." AND `mame` = '".$itemName."'";
-			mysqli_query( $conn, $sql );
+		//if($act == "完成"){
+			//$itemName = explode(" ",$message['text'])[3];
+			//$sql = "UPDATE `toDoList_detail` SET `finish`=1 WHERE `id` = ".$id." AND `mame` = '".$itemName."'";
+			//mysqli_query( $conn, $sql );
 			$client->replyMessage(array(
 				'replyToken' => $event['replyToken'],
 				'messages' => array(
 				    array(
 					'type' => 'text', //訊息類型 (文字)
-					'text' => $sql
+					'text' => "123"
 				    )
 				)
 			    ));
-		}
+		//}
 		//$sql = "SELECT * FROM `toDoList_detail` WHERE `id` = ".$id;
 		
 		/*
