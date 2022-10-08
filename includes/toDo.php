@@ -21,7 +21,7 @@ if($toDo) {
 				'messages' => array(
 				    array(
 					'type' => 'text', //訊息類型 (文字)
-					'text' => "123"
+					'text' => $sql
 				    )
 				)
 			    ));
