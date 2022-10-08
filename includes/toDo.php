@@ -147,29 +147,29 @@ if($toDo) {
 			];
 			
 			
-			$tmp = "{
-  "type": "bubble",
-  "body": {
-    "type": "box",
-    "layout": "vertical",
-    "contents": [
-      {
-        "type": "text",
-        "text": "全部",
-        "weight": "bold",
-        "color": "#1DB446",
-        "size": "sm"
-      },
-      {
-        "type": "text",
-        "text": "必做清單",
-        "weight": "bold",
-        "size": "xxl",
-        "margin": "md"
-      }
-    ]
-  }
-}";
+			$tmp = array(
+    "type" => "bubble",
+    "body" => array(
+        "type" => "box",
+        "layout" => "vertical",
+        "contents" => array(
+            array(
+                "type" => "text",
+                "text" => "全部",
+                "weight" => "bold",
+                "color" => "#1DB446",
+                "size" => "sm"
+            ),
+            array(
+                "type" => "text",
+                "text" => "必做清單",
+                "weight" => "bold",
+                "size" => "xxl",
+                "margin" => "md"
+            )
+        )
+    )
+);
 			
 
         $client->replyMessage(array(
@@ -178,7 +178,7 @@ if($toDo) {
                 array(
                     'type' => 'flex', //訊息類型 (flex)
                     'altText' => 'Example flex message template', //替代文字
-                    'contents' => json_decode($tmp) //Flex Message 內容
+                    'contents' => $tmp //Flex Message 內容
                 )
             )
         ));
