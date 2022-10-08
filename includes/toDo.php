@@ -28,6 +28,9 @@ if($toDo) {
 			$sql = "UPDATE `toDoList_detail` SET `finish` = 0 WHERE `id` = ".$id." AND `name` = '".$itemName."'";
 			$res = mysqli_query( $conn, $sql );
 			
+			$sql = "UPDATE `toDoList` SET `updateTime` = ".time()." WHERE `id` = ".$id;
+			$res = mysqli_query( $conn, $sql );
+			
 			$sql = "SELECT * FROM `toDoList` WHERE `name` = '".$name."'";
 			$toDo = mysqli_query( $conn, $sql );
 			$list = mysqli_fetch_array($toDo, MYSQLI_ASSOC);
