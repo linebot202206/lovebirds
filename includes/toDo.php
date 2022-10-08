@@ -156,6 +156,118 @@ if($toDo) {
                 "weight" => "bold",
                 "size" => "xxl",
                 "margin" => "md"
+            ),
+            array(
+                "type" => "separator",
+                "margin" => "xxl"
+            ),
+            array(
+                "type" => "box",
+                "layout" => "vertical",
+                "margin" => "xxl",
+                "spacing" => "sm",
+                "contents" => array(
+                    array(
+                        "type" => "box",
+                        "layout" => "horizontal",
+                        "contents" => array(
+                            array(
+                                "type" => "text",
+                                "text" => "❎",
+                                "size" => "sm",
+                                "color" => "#555555",
+                                "flex" => 1
+                            ),
+                            array(
+                                "type" => "text",
+                                "text" => "去澎湖看煙火牽手",
+                                "size" => "sm",
+                                "color" => "#111111",
+                                "flex" => 8
+                            )
+                        )
+                    ),
+                    array(
+                        "type" => "box",
+                        "layout" => "horizontal",
+                        "contents" => array(
+                            array(
+                                "type" => "text",
+                                "text" => "❎",
+                                "size" => "sm",
+                                "color" => "#555555",
+                                "flex" => 1
+                            ),
+                            array(
+                                "type" => "text",
+                                "text" => "跟彼此父母吃飯",
+                                "size" => "sm",
+                                "color" => "#111111",
+                                "flex" => 8
+                            )
+                        )
+                    ),
+                    array(
+                        "type" => "box",
+                        "layout" => "horizontal",
+                        "contents" => array(
+                            array(
+                                "type" => "text",
+                                "text" => "❎",
+                                "size" => "sm",
+                                "color" => "#555555",
+                                "flex" => 1
+                            ),
+                            array(
+                                "type" => "text",
+                                "text" => "在彼此家過夜",
+                                "size" => "sm",
+                                "color" => "#111111",
+                                "flex" => 8
+                            )
+                        )
+                    ),
+                    array(
+                        "type" => "box",
+                        "layout" => "horizontal",
+                        "contents" => array(
+                            array(
+                                "type" => "text",
+                                "text" => "✅",
+                                "size" => "sm",
+                                "color" => "#555555",
+                                "flex" => 1
+                            ),
+                            array(
+                                "type" => "text",
+                                "text" => "認識彼此的朋友",
+                                "size" => "sm",
+                                "color" => "#111111",
+                                "flex" => 8
+                            )
+                        )
+                    ),
+                    array(
+                        "type" => "box",
+                        "layout" => "horizontal",
+                        "contents" => array(
+                            array(
+                                "type" => "text",
+                                "text" => "❎",
+                                "size" => "sm",
+                                "color" => "#555555",
+                                "flex" => 1
+                            ),
+                            array(
+                                "type" => "text",
+                                "text" => "穿情侶衣約會",
+                                "size" => "sm",
+                                "color" => "#111111",
+                                "flex" => 8
+                            )
+                        )
+                    )
+                )
             )
         )
     )
@@ -166,7 +278,7 @@ $client->replyMessage(array(
 	        'messages' => array(
 	            array(
 	                'type' => 'text', //訊息類型 (文字)
-	                'text' => json_encode($out)
+	                'text' => json_encode($tmp)
 	                //'text' => 'Hello, world!'.$profile['displayName'] //回覆訊息
 	            )
 	        )
