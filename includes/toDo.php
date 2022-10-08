@@ -48,6 +48,11 @@ if($toDo) {
 							'size' => "sm",
 							'color' => "#555555",
 							'flex' => 1,
+							'action' => [
+								'type' => "message",
+								'label' => "action",
+								'text' => "hello",
+							],
 						],
 						[
 							'type' => "text",
