@@ -15,7 +15,16 @@ if($toDo) {
 		if($act == "完成"){
 			$itemName = $message['text'])[3];
 			$sql = "UPDATE `toDoList_detail` SET `finish`=1 WHERE `id` = ".$id." AND `mame` = '".$itemName."'";
-			mysqli_query( $conn, $sql );
+			//mysqli_query( $conn, $sql );
+			$client->replyMessage(array(
+				'replyToken' => $event['replyToken'],
+				'messages' => array(
+				    array(
+					'type' => 'text', //訊息類型 (文字)
+					'text' => $sql
+				    )
+				)
+			    ));
 		}
 		//$sql = "SELECT * FROM `toDoList_detail` WHERE `id` = ".$id;
 		
