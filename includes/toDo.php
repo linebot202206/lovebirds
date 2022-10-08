@@ -35,6 +35,7 @@ if($toDo) {
 		
 		if($data){
 			$icon = ["❎","✅"];
+			$test = ["完成","未做"];
 			$contents = [];
 
 			foreach ($data as $value) {
@@ -51,7 +52,7 @@ if($toDo) {
 							'action' => [
 								'type' => "message",
 								'label' => "action",
-								'text' => "hello",
+								'text' => "#清單 {$name} 未做 {$value['name']}",
 							],
 						],
 						[
