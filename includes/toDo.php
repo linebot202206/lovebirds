@@ -4,8 +4,14 @@ require_once('connection.php');
 
 //$name = "必做清單";
 $name = explode(" ",$message['text'])[1];
+if(explode(" ",$message['text'])[2] == "未做"){
+	$sql = "SELECT * FROM `toDoList` WHERE `name` = '".$name."' AND `finish` = 0";
+}else{
+	$sql = "SELECT * FROM `toDoList` WHERE `name` = '".$name."'";
+}
 
-$sql = "SELECT * FROM `toDoList` WHERE `name` = '".$name."'";
+
+//$sql = "SELECT * FROM `toDoList` WHERE `name` = '".$name."'";
 $toDo = mysqli_query( $conn, $sql );
 if($toDo) {
 	$list = mysqli_fetch_array($toDo, MYSQLI_ASSOC);
@@ -150,6 +156,7 @@ if($toDo) {
 		}
 	}
 }
+
 
 
 ?>
