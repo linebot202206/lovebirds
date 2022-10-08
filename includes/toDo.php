@@ -132,7 +132,7 @@ if($toDo) {
 					'type' => "box",
 					'layout' => "vertical",
 					//'contents' => array_merge($title, $separator, $box, $separator, $time),
-					'contents' => array_merge($title, $separator, $box),
+					'contents' => array_merge($title, $separator, $box, $separator),
 				]
 			];
 			
