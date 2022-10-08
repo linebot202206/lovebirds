@@ -12,7 +12,7 @@ if($toDo) {
 	if($list){
 		$id = $list['id'];
 		$act = explode(" ",$message['text'])[2];
-		//if($act == "完成"){
+		if($act == "完成"){
 			//$itemName = explode(" ",$message['text'])[3];
 			//$sql = "UPDATE `toDoList_detail` SET `finish`=1 WHERE `id` = ".$id." AND `mame` = '".$itemName."'";
 			//mysqli_query( $conn, $sql );
@@ -25,7 +25,7 @@ if($toDo) {
 				    )
 				)
 			    ));
-		//}
+		}
 		//$sql = "SELECT * FROM `toDoList_detail` WHERE `id` = ".$id;
 		
 		/*
