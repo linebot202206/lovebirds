@@ -147,7 +147,29 @@ if($toDo) {
 			];
 			
 			
-			$tmp = "{"type":"bubble","body":{"type":"box","layout":"vertical","contents":[{"type":"text","text":"\u5168\u90e8","weight":"bold","color":"#1DB446","size":"sm"},{"type":"text","text":"\u5fc5\u505a\u6e05\u55ae","weight":"bold","size":"xxl","margin":"md"}]},"style":{"footer":{"separator":true}}}";
+			$tmp = "{
+  "type": "bubble",
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "text",
+        "text": "全部",
+        "weight": "bold",
+        "color": "#1DB446",
+        "size": "sm"
+      },
+      {
+        "type": "text",
+        "text": "必做清單",
+        "weight": "bold",
+        "size": "xxl",
+        "margin": "md"
+      }
+    ]
+  }
+}";
 			
 
         $client->replyMessage(array(
