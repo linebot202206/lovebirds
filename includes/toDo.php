@@ -146,17 +146,20 @@ if($toDo) {
 				],
 			];
 			
+			
+			$tmp = "{"type":"bubble","body":{"type":"box","layout":"vertical","contents":[{"type":"text","text":"\u5168\u90e8","weight":"bold","color":"#1DB446","size":"sm"},{"type":"text","text":"\u5fc5\u505a\u6e05\u55ae","weight":"bold","size":"xxl","margin":"md"}]},"style":{"footer":{"separator":true}}}";
+			
 
-	    $client->replyMessage(array(
-	        'replyToken' => $event['replyToken'],
-	        'messages' => array(
-	            array(
-	                'type' => 'text', //訊息類型 (文字)
-	                'text' => $list['name']
-	                //'text' => 'Hello, world!'.$profile['displayName'] //回覆訊息
-	            )
-	        )
-	    ));
+        $client->replyMessage(array(
+            'replyToken' => $event['replyToken'],
+            'messages' => array(
+                array(
+                    'type' => 'flex', //訊息類型 (flex)
+                    'altText' => 'Example flex message template', //替代文字
+                    'contents' => json_decode($tmp) //Flex Message 內容
+                )
+            )
+        ));
 			
 			
 		}
