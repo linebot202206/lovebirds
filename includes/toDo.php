@@ -52,7 +52,7 @@ if($toDo) {
 							'action' => [
 								'type' => "message",
 								'label' => "action",
-								'text' => "#清單 {$name} 未做 {$value['name']}",
+								'text' => "#清單 {$name} {$test[$value['finish']]} {$value['name']}",
 							],
 						],
 						[
