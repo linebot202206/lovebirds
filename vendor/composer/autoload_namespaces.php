@@ -6,6 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Model' => array($baseDir . '/model'),
-    'Mockery' => array($vendorDir . '/mockery/mockery/library'),
+    'Google_' => array($vendorDir . '/google/apiclient/src'),
 );
